@@ -1,0 +1,23 @@
+from telegram import Update from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE): await update.message.reply_text("Это справка по использованию бота.")
+async def about_command(update: Update, context: ContextTypes.DEFAULT_TYPE): await update.message.reply_text("Этот бот подбирает произведения по настроению!")
+if name == "main": app = ApplicationBuilder().token("from telegram import Update
+from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Это справка по использованию бота.")
+
+async def about_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Этот бот подбирает произведения по настроению!")
+
+if name == "__main__":
+    app = ApplicationBuilder().token("8897901445:AAHFgdxPAp02uFZyh6W_H1yiL7w9MXiwED8").build()
+    
+    app.add_handler(CommandHandler("help", help_command))
+    app.add_handler(CommandHandler("about", about_command))
+
+    app.run_polling()").build()
+app.add_handler(CommandHandler("help", help_command))
+app.add_handler(CommandHandler("about", about_command))
+
+app.run_polling()
